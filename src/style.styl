@@ -1,0 +1,99 @@
+nav-width = 50px
+line-width = 2px
+thick-line-width = 5px
+
+body
+	margin: 0
+	padding: 0
+	
+main
+	display: flex
+	
+
+.name 
+	font-family: sans-serif
+	font-size: 4em
+	flex: 1
+	padding-right: 10vw
+	
+
+.under
+	font-family sans-serif
+	padding-left: 50vw
+	font-size: 2em
+	text-align left
+	
+	
+h1
+	margin 0
+
+.fp-tableCell
+	// display flex
+	height: 100vh !important
+	width: calc(100vw - nav-width)  !important
+	flex: 1
+	// flex-direction: column
+	text-align center
+	display flex
+	// transform: rotateX(5deg)
+
+	
+	// transform: rotateX(20deg)
+	
+  
+	.page
+		flex: 1
+		align-self center
+		width: 100vw
+		
+
+
+nav
+	width: 100vh
+	// transform rotateZ(90deg) translateY(100%)
+	background-color black
+	height: nav-width 
+	position absolute
+	display flex
+	font-family sans-serif
+	font-size 1.5em
+	
+	transform rotateZ(90deg) translateY(-100vh)
+	justify-content center
+	right: 0px
+	transform-origin: left top
+	
+	> a
+		margin-left 10px
+		// border-left 1px rgba(255,255,255,.4) solid
+		// margin auto
+		display block
+		height nav-width - line-width
+		line-height nav-width - line-width
+		text-decoration none
+		color #CCCCFF
+		border-bottom line-width solid blue
+		transition all .5s
+		width 120px
+		text-align center
+		
+
+		&.active
+			// background red
+			border-bottom thick-line-width solid blue
+			height nav-width - thick-line-width
+			line-height nav-width - thick-line-width
+		
+		&:hover
+			background: gray
+	
+.background
+	position: absolute
+	top: 0px
+	left: 0px
+	z-index: -1
+	width: calc(100vw - nav-width)  !important
+	height: 100vh !important
+	background-color: lightblue
+	
+	// background: rgba(0,0,0,0.2)
