@@ -16,7 +16,11 @@ var config = {
 				'style-loader',
 				'css-loader',
 				'postcss-loader',
-				'stylus-loader'] }
+				'stylus-loader'] },
+			{ test: /\.css$/, use: [
+				'style-loader',
+				'css-loader',
+			] }
 		]
 	}
 };

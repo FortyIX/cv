@@ -29,8 +29,9 @@ h1
 
 .fp-tableCell
 	// display flex
+	position: relative
 	height: 100vh !important
-	width: calc(100vw - nav-width)  !important
+	width: "calc(100vw - %s) !important" % nav-width 
 	flex: 1
 	// flex-direction: column
 	text-align center
@@ -39,7 +40,12 @@ h1
 
 	
 	// transform: rotateX(20deg)
-	
+	.fixer
+		position absolute
+		z-index: 3
+		height 100vh
+		display: flex
+		pointer-events:none;
   
 	.page
 		flex: 1
@@ -92,7 +98,16 @@ nav
 	top: 0px
 	left: 0px
 	z-index: -1
-	width: calc(100vw - nav-width)  !important
+	width: "calc(100vw - %s) !important" % nav-width 
+	height: 100vh !important
+	background-color: lightblue
+	
+.terminal
+	position: absolute
+	top: 0px
+	left: 0px
+	z-index: 0
+	width: "calc(100vw - %s) !important" % nav-width 
 	height: 100vh !important
 	background-color: lightblue
 	

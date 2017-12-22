@@ -20,9 +20,11 @@
   },
   "homepage": "https://github.com/alex4o/cv#readme",
   "dependencies": {
+    "browsix": "^0.9.2",
     "fullpage.js": "^2.9.4",
     "particlesjs": "^2.0.2",
-    "typed.js": "^2.0.6"
+    "typed.js": "^2.0.6",
+    "xterm": "^2.9.2"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

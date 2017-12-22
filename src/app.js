@@ -1,5 +1,9 @@
 require("./style.styl")
 
+import Terminal from "xterm"
+require("xterm/dist/xterm.css")
+
+Terminal.loadAddon('fit');
 
 import Particles from "particlesjs"
 import Typed from "typed.js"
@@ -7,12 +11,36 @@ import Typed from "typed.js"
 import $ from "jquery"
 import fullpage from "fullpage.js"
 
+
+var term = new Terminal();
+window.t = term
+
+
 window.$ = $
 
 // console.log(Particles)
 
 window.addEventListener("load", function load(event){
 	window.removeEventListener("load", load, false); //remove listener, no longer needed
+	term.open(document.getElementById("terminal"))
+	term.on("key", (char, data) => {
+		console.log(data.keyCode)
+		if(data.keyCode == 13){
+			char = '\r\n'
+		}else if(data.keyCode == 8) {
+			char = "\b \b"
+		}
+
+		term.write(char)
+	})
+
+	term.on("lineFeed", (data) => {
+		console.log("data: ", data)
+	})
+
+	term.fit()
+	term.writeln("This is a terminal window.")
+	term.write("You can write here:")
 	Particles.init({
 		selector: '.background',
 		connectParticles: true
@@ -31,7 +59,7 @@ window.addEventListener("load", function load(event){
 		animateAnchor: false,
 		menu: "nav"
 	});
-	console.log(thing)
+	// console.log(thing)
 
 },false);
 
