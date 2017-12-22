@@ -1,10 +1,52 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Aleksandar Bonin's CV</title>
+	<meta charset="utf-8">
+	<title>Aleksandar Bonin's CV</title>
+	<script type="text/javascript" src="bundle.js"></script>
   </head>
   <body>
-    <p>Something something important ???</p>
+	<main>
+		<div id="fullpage">
+	
+
+			<div class="section" data-anchor="home">
+				<div class="page">
+					<canvas class="background"></canvas>
+					<h1 class="name">Aleksandar Bonin</h1>
+					<div class="under">
+						<span>Prefix:</span>
+						<span class="element"></span>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="section" data-anchor="info">
+				<div class="page">
+					<h1 class="name">Other</h1>
+					
+				</div>
+			</div>
+			<div class="section" data-anchor="info">
+				<div class="page">
+					<h1 class="name">Education</h1>
+					
+				</div>
+			</div>
+		</div>
+
+		<nav>
+			<a data-menuanchor="home" href="#home" class="active">
+				home
+			</a>
+			<a data-menuanchor="info" href="#info">
+				info
+			</a>
+			<a data-menuanchor="education" href="#education">
+				education
+			</a>
+		</nav>
+	</main>
   </body>
 </html>
